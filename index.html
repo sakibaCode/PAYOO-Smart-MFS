@@ -29,13 +29,36 @@
 
     <!-- font-awesome(icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
-<body class="min-h-screen mx-h-md bg-base-200 mx-auto">
+<body class="min-h-screen max-w-md mx-auto bg-base-200">
 
+    <section class="login">
+        <div class="logo w-[200px] mx-auto pt-45">
+            <img src="assets/Logo-full.png" alt="">
+        </div>
+
+        
+        <div class="form pt-10">
+            <div class="bg-base-100 w-full max-w-sm mx-auto mt-10  shrink-0 shadow rounded-md">
+            <div class="card-body">
+                <fieldset class="fieldset">
+                    <label class="label font-bold text-black text-[15px]">Mobile Number</label>
+                    <input id="number-input" type="number" class="input rounded-full" placeholder="Enter Your Mobile Number" />
+                    <label class="label font-bold text-black text-[15px]">4 Digit Pin</label>
+                    <input id="password-input" type="password" class="input rounded-full" placeholder="Password" />
+                    <button id="login-btn" class="btn btn-primary mt-4 rounded-full">Login</button>
+                </fieldset>
+            </div>
+        </div>
+        
+
+    </section>
+
+    <script src="script/login.js"></script>
 </body>
 
 </html>
