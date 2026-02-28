@@ -7,7 +7,7 @@ document.getElementById("login-btn").addEventListener("click",function(){
     const passwordNumber = passwordInput.value
 
     if(contactNumber=="01718517777" && passwordNumber=="admin123"){
-        alert("Successfully logined.")
+        window.location.assign("home.html")
     }
     else{
         alert("Incorrect Number or Password")
