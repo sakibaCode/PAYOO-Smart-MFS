@@ -1,15 +1,12 @@
 document.getElementById("cashout-btn").addEventListener("click", function () {
 
-    const agentNumber = document.getElementById("agent-number").value;
-    const amount = Number(document.getElementById("cashout-amount").value);
-    const pin = document.getElementById("password-input").value;
+    const agentNumber = getInputValue("agent-number");
+    const amount = getInputNumber("cashout-amount");
+    const pin = getInputValue("password-input");
+    const currentBalance = getElementNumber("balance");
 
-    const balanceElement = document.getElementById("balance");
-    const currentBalance = Number(balanceElement.innerText);
-
-    // Basic validation
-    if (!agentNumber || !amount || amount <= 0) {
-        alert("Please enter valid information.");
+    if (!agentNumber || amount <= 0) {
+        alert("Invalid input");
         return;
     }
 
@@ -23,8 +20,6 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
         return;
     }
 
-    const newBalance = currentBalance - amount;
-    balanceElement.innerText = newBalance;
-
+    setElementValue("balance", currentBalance - amount);
     alert("Cashout Successful.");
 });
